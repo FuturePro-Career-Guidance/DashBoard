@@ -1,0 +1,31 @@
+[
+    {
+      "id":"204059X",
+      "name": "Jin",
+      "field": "IT",
+      "status": "Requested",
+      "rate": 0 
+    },
+    {
+        "id":"204059X",
+        "name": "Anne",
+        "field": "Business",
+        "status": "Interviewed",
+        "rate": 78 
+      },
+      {
+        "id":"204059X",
+        "name": "Jimin",
+        "field": "FD",
+        "status": "Ongoing",
+        "rate": 5 
+      },
+      {
+        "id":"204059X",
+        "name": "Jungkook",
+        "field": "Civil Engineering",
+        "status": "Interviewed",
+        "rate": 35 
+      }
+  ]
+  
