@@ -17,7 +17,7 @@ export function SearchBar(props) {
   const inputText = useColorModeValue("gray.700", "gray.100");
   return (
     <InputGroup w={{ base: "100%", md: "200px" }} {...rest}>
-      <InputLeftElement
+      {/* <InputLeftElement
         children={
           <IconButton
             bg='inherit'
@@ -45,7 +45,7 @@ export function SearchBar(props) {
         _placeholder={{ color: "gray.400", fontSize: "14px" }}
         borderRadius={borderRadius ? borderRadius : "30px"}
         placeholder={placeholder ? placeholder : "Search..."}
-      />
+      /> */}
     </InputGroup>
   );
 }

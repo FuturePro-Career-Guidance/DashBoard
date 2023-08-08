@@ -32,8 +32,8 @@ import Storage from "views/admin/profile/components/Storage";
 import Upload from "views/admin/profile/components/Upload";
 
 // Assets
-import banner from "assets/img/auth/banner.png";
-import avatar from "assets/img/avatars/avatar4.png";
+import banner from "assets/img/auth/banner2.jpg";
+import avatar from "assets/img/avatars/avatar11.png";
 import React from "react";
 
 export default function Overview() {
@@ -43,7 +43,7 @@ export default function Overview() {
       <Grid
         templateColumns={{
           base: "1fr",
-          lg: "1.34fr 1fr 1.62fr",
+          lg: "4fr 2fr",
         }}
         templateRows={{
           base: "repeat(3, 1fr)",
@@ -54,18 +54,16 @@ export default function Overview() {
           gridArea='1 / 1 / 2 / 2'
           banner={banner}
           avatar={avatar}
-          name='Adela Parkson'
-          job='Product Designer'
-          posts='17'
-          followers='9.7k'
-          following='274'
+          name='Milanka Tharangana'
+          job='Software Engineer'
+          description='18 Reviews'
         />
         <Storage
           gridArea={{ base: "2 / 1 / 3 / 2", lg: "1 / 2 / 2 / 3" }}
-          used={25.6}
-          total={50}
+          used={0}
+          total={100}
         />
-        <Upload
+        {/* <Upload
           gridArea={{
             base: "3 / 1 / 4 / 2",
             lg: "1 / 3 / 2 / 4",
@@ -73,22 +71,19 @@ export default function Overview() {
           minH={{ base: "auto", lg: "420px", "2xl": "365px" }}
           pe='20px'
           pb={{ base: "100px", lg: "20px" }}
-        />
+        /> */}
       </Grid>
       <Grid
-        mb='20px'
         templateColumns={{
           base: "1fr",
-          lg: "repeat(2, 1fr)",
-          "2xl": "1.34fr 1.62fr 1fr",
+          lg: "4fr",
         }}
         templateRows={{
-          base: "1fr",
-          lg: "repeat(2, 1fr)",
-          "2xl": "1fr",
+          base: "repeat(3, 1fr)",
+          lg: "1fr",
         }}
         gap={{ base: "20px", xl: "20px" }}>
-        <Projects
+        {/* <Projects
           gridArea='1 / 2 / 2 / 2'
           banner={banner}
           avatar={avatar}
@@ -97,13 +92,13 @@ export default function Overview() {
           posts='17'
           followers='9.7k'
           following='274'
-        />
+        /> */}
         <General
-          gridArea={{ base: "2 / 1 / 3 / 2", lg: "1 / 2 / 2 / 3" }}
+          gridArea={{ base: "2 / 1 / 3 / 2", lg: "1 / 1/ 1 / 1" }}
           minH='365px'
           pe='20px'
         />
-        <Notifications
+        {/* <Notifications
           used={25.6}
           total={50}
           gridArea={{
@@ -111,7 +106,7 @@ export default function Overview() {
             lg: "2 / 1 / 3 / 3",
             "2xl": "1 / 3 / 2 / 4",
           }}
-        />
+        /> */}
       </Grid>
     </Box>
   );

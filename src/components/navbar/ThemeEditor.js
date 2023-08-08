@@ -13,11 +13,11 @@ import { MdPalette } from 'react-icons/md'
 export function ThemeEditor(props) {
     return (
         <ThemeEditorContainer>
-          <ThemeEditorButton {...props} />
+          {/* <ThemeEditorButton {...props} />
           <ThemeEditorDrawer hideUpgradeToPro>
             <ThemeEditorColors icon={CgColorPicker} title="Colors" />
             <ThemeEditorFontSizes icon={ImFontSize} title="Font Sizes" />
-          </ThemeEditorDrawer>
+          </ThemeEditorDrawer> */}
         </ThemeEditorContainer>
       )
 }

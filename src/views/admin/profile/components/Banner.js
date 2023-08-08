@@ -1,17 +1,18 @@
 // Chakra imports
-import { Avatar, Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Avatar, Text, Flex, CircularProgress, CircularProgressLabel, useColorModeValue } from '@chakra-ui/react';
+
 import Card from "components/card/Card.js";
 import React from "react";
 
 export default function Banner(props) {
-  const { banner, avatar, name, job, posts, followers, following } = props;
+  const { banner, avatar, name, job, posts, followers, following, description } = props;
+
   // Chakra Color Mode
   const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
-  const textColorSecondary = "gray.400";
-  const borderColor = useColorModeValue(
-    "white !important",
-    "#111C44 !important"
-  );
+  const textColorSecondary = "black.400";
+  const borderColor = useColorModeValue("white !important", "#111C44 !important");
+
+
   return (
     <Card mb={{ base: "0px", lg: "20px" }} align='center'>
       <Box
@@ -37,31 +38,44 @@ export default function Banner(props) {
         {job}
       </Text>
       <Flex w='max-content' mx='auto' mt='26px'>
-        <Flex mx='auto' me='60px' align='center' direction='column'>
-          <Text color={textColorPrimary} fontSize='2xl' fontWeight='700'>
+        <Flex mx='auto' me='100px' align='center' direction='column'>
+          {/* <Text color={textColorPrimary} fontSize='2xl' fontWeight='700'>
             {posts}
-          </Text>
+          </Text> */}
           <Text color={textColorSecondary} fontSize='sm' fontWeight='400'>
-            Posts
+            CV Reviewd
           </Text>
+          {/* Add progress bar for Posts */}
+          <CircularProgress value={50} color="green" size="50px">
+            <CircularProgressLabel>50%</CircularProgressLabel>
+          </CircularProgress>
         </Flex>
-        <Flex mx='auto' me='60px' align='center' direction='column'>
-          <Text color={textColorPrimary} fontSize='2xl' fontWeight='700'>
+        <Flex mx='auto' me='100px' align='center' direction='column'>
+          {/* <Text color={textColorPrimary} fontSize='2xl' fontWeight='700'>
             {followers}
-          </Text>
+          </Text> */}
           <Text color={textColorSecondary} fontSize='sm' fontWeight='400'>
-            Followers
+            Mock Interviews
           </Text>
+          {/* Add progress bar for Followers */}
+          <CircularProgress value={75} color="blue" size="50px">
+            <CircularProgressLabel>75%</CircularProgressLabel>
+          </CircularProgress>
         </Flex>
         <Flex mx='auto' align='center' direction='column'>
-          <Text color={textColorPrimary} fontSize='2xl' fontWeight='700'>
-            {following}
-          </Text>
           <Text color={textColorSecondary} fontSize='sm' fontWeight='400'>
-            Following
+            Overall Engagement
           </Text>
+          {/* Add progress bar for Following */}
+          <CircularProgress value={60} color="red" size="50px">
+            <CircularProgressLabel>60%</CircularProgressLabel>
+          </CircularProgress>
         </Flex>
       </Flex>
+      {/* Add description text */}
+      <Text color={textColorSecondary} fontSize='md' fontWeight='400' mt='20px'>
+        User Reviews: {description}
+      </Text>
     </Card>
   );
 }

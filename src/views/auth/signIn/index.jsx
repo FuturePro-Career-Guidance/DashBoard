@@ -43,7 +43,7 @@ import {
 import { HSeparator } from "components/separator/Separator";
 import DefaultAuth from "layouts/auth/Default";
 // Assets
-import illustration from "assets/img/auth/auth.png";
+import illustration from "assets/img/auth/banner3.png";
 import { FcGoogle } from "react-icons/fc";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { RiEyeCloseLine } from "react-icons/ri";
@@ -203,11 +203,10 @@ function SignIn() {
             </Flex>
             <Button
               fontSize='sm'
-              variant='brand'
-              fontWeight='500'
+              colorScheme="teal"
               w='100%'
               h='50'
-              mb='24px'>
+              mb='24px' btn>
               Sign In
             </Button>
           </FormControl>
